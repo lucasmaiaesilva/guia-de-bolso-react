@@ -8,7 +8,7 @@
     "plugins": ["disqus"],
     "pluginsConfig": {
       "disqus": {
-        "shortName": "woliveiras"
+        "shortName": ""
        }
     }
 }

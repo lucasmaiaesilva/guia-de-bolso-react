@@ -221,7 +221,7 @@ App.defaultProps = {
 
 Como pode perceber, neste tipo de renderização voltamos a utilizar a palavra chave `this`, pois estamos falando de renderização de componente via instanciação de objetos.
 
-### Prop Key
+## Prop Key
 
 A Propridade Key é usada quando replicamos um mesmo componente *mais de uma vez*, geralmente por iteração de arrays. O React precisa dessa propriedade para renderizar e entender que cada chave que ele tiver possui uma característica *única*, portanto *não* podemos utilizar valores repetidos dentro da prop `key`.
 
@@ -240,3 +240,17 @@ return (
 A propriedade `key`, não deve ser trabalhada na aplicação, portanto ela deve servir somente como um parâmetro para o React, para que ele possa se "orientar" na hora de renderizar os componentes.
 
 > Obs: A propriedade Key não deve jamais, ser duplicada.
+
+## Eventos
+
+Usamos eventos em React de maneira `inline`.
+
+```js
+<button onClick={ (e) => {
+  alert('botão acionado')
+} }>
+
+</button>
+```
+
+> Obs: Usamos os eventos de maneira inline, porém isso não quer dizer que o React o renderiza de maneira inline, uma vez que isso não é uma boa prática no Javascript.

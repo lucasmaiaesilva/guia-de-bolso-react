@@ -220,3 +220,23 @@ App.defaultProps = {
 ```
 
 Como pode perceber, neste tipo de renderização voltamos a utilizar a palavra chave `this`, pois estamos falando de renderização de componente via instanciação de objetos.
+
+### Prop Key
+
+A Propridade Key é usada quando replicamos um mesmo componente *mais de uma vez*, geralmente por iteração de arrays. O React precisa dessa propriedade para renderizar e entender que cada chave que ele tiver possui uma característica *única*, portanto *não* podemos utilizar valores repetidos dentro da prop `key`.
+
+```js
+let arr = ['pedro', 'carlos', 'joão']
+
+return (
+  <div>
+    { arr.map( (item, index) => (
+      <Mensagem nome={item} key={index} />
+    ) ) }
+  </div>
+)
+```
+
+A propriedade `key`, não deve ser trabalhada na aplicação, portanto ela deve servir somente como um parâmetro para o React, para que ele possa se "orientar" na hora de renderizar os componentes.
+
+> Obs: A propriedade Key não deve jamais, ser duplicada.

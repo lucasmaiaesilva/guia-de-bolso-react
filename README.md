@@ -44,3 +44,83 @@ class App extends React.Component {
 ```
 
 Como pode ver na classe Mensagem, a propriedade name é 'pendurada' no objeto props e acessada pela palavra chave `this` que é uma referência ao próprio objeto.
+
+### Exceções de Props HTML
+Pelo fato de existirem algumas palavras reservadas no Javascript, alguns props devem ser alterados quando passados, vejamos quais são:
+
+#### Class
+
+A `class` dentro de um atributo HTML não pode ser usada dentro de um componente JSX, isso porque como já mencionado, o mesmo possui uma palavra reservada de **mesmo nome**, então substituímos para `className`.
+
+```js
+class App extends React.Component {
+  render () {
+    return (
+      <div className='container'>
+        <h1>Olá mundo!</h1>
+      </div>
+    )
+  }
+}
+```
+
+Nesse exemplo fica nítido que a palavra `class` está sendo usada no início para definir que estamos criando uma classe em Javascript, portanto não podemos usar esse mesmo nome como atributo HTML da div.
+
+#### For
+
+É comum quando utilizamos uma label em um formulário, utilizarmos a palavra `for`, para caracterizar que aquele elemento pertence aquela determinada label.
+
+Ex: `<label for='email'>`.
+
+Nesse caso então substituímos o `for` por `htmlFor`.
+
+```js
+// código dentro de um componente JSX
+
+<div className='form'>
+  <label htmlFor='nome'> Digite seu nome: </label>
+  <input type='text' id='nome' />
+</div>
+```
+
+### getDefaultProps
+
+Esse método existe para tratarmos Props *default* de nosso componente, ou seja, quando não declaramos nenhuma propriedade no momento da chamada do código.
+
+Veja o exemplo no código:
+
+```js
+
+'use strict'
+
+import React from 'react'
+
+class Mensagem extends React.Component {
+
+  getDefaultProps () {
+    return (
+      name: 'mundo'
+    )
+  },
+
+  render () {
+    return (
+      <h1>Olá {this.props.name}! </h1>
+    )
+  }
+}
+
+class App extends React.Component {
+  render () {
+    return (
+      <div>
+        <Mensagem />
+        <Mensagem name='Lucas Maia' />  
+      </div>
+    )
+  }
+}
+
+```
+
+Dentro da classe App, podemos ver 2 chamadas do Component 'Mensagem', a primeira delas retornará a Mensagem 'Olá mundo', porque não especificamos nenhuma `prop` name então o método `getDefaultProps` nos fornece um name padrão e a segunda retornará a mensagem 'Olá Lucas Maia'.

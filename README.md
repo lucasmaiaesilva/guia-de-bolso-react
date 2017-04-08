@@ -196,3 +196,27 @@ Title.defaultProps = {
   name: 'Desconhecido'
 }
 ```
+
+### Classes (ES2015)
+
+Para renderizar um componente usando classes, basta criar uma classe e extendê-la a partir de um Componente do React, isso faz parte de um conceito que surgiu com a POO (Programação Orientada a Objetos), chamado de *herança*.
+
+Vejamos como renderizar um componente a partir de uma classe:
+
+```js
+import React, {Component} from 'react'
+
+class App extends Component {
+  render () {
+    return (
+      <h1>Alô {this.props.mensagem}!</h1>
+    )
+  }
+}
+
+App.defaultProps = {
+  mensagem: 'criançada'
+}
+```
+
+Como pode perceber, neste tipo de renderização voltamos a utilizar a palavra chave `this`, pois estamos falando de renderização de componente via instanciação de objetos.

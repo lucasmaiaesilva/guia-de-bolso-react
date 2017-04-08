@@ -1,6 +1,6 @@
 # Guia prático sobre ReactJS
 
-Este guia tem como objetivo principal armazenar informações úteis e práticas sobre o Framework ReactJS.
+Este guia tem como objetivo principal armazenar informações úteis e práticas sobre a biblioteca ReactJS.
 
 Algumas features usadas juntamente com o React.
 
@@ -42,3 +42,5 @@ class App extends React.Component {
 }
 
 ```
+
+Como pode ver na classe Mensagem, a propriedade name é 'pendurada' no objeto props e acessada pela palavra chave `this` que é uma referência ao próprio objeto.

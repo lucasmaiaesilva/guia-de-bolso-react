@@ -113,7 +113,7 @@ class App extends React.Component {
 
 Dentro da classe App, podemos ver 2 chamadas do Component 'Mensagem', a primeira delas retornará a Mensagem 'Olá mundo', porque não especificamos nenhuma `prop` name então o método `getDefaultProps` nos fornece um name padrão e a segunda retornará a mensagem 'Olá Lucas Maia'.
 
-**Obs:** Ao passar algum outro tipo de dado em Javascript via props que não seja string, deve se fazê-lo colocando os dados entre chaves. Ex: 
+**Obs:** Ao passar algum outro tipo de dado em Javascript via props que não seja string, deve se fazê-lo colocando os dados entre chaves. Ex:
 
 
 {% raw %}
@@ -121,3 +121,24 @@ Dentro da classe App, podemos ver 2 chamadas do Component 'Mensagem', a primeira
 <Component number={2} checked={false} obj={ { a: 1, b:3 } }/>
 ```
 {% endraw %}
+
+### Proptype
+
+Existe uma feature do React que nos permite de certo modo 'mascarar' os dados nele contidos a fim de dar uma maior segurança as propriedades passadas entre os Componentes.
+
+```js
+const React from 'react'
+
+const MostrarDados = ({ nome, idade }) => (
+  <div className='dados'>
+    <p>Olá meu nome é {nome} e tenho {idade} anos.</p>
+  </div>
+)
+
+MostrarDados.propTypes = {
+  nome: React.PropTypes.string.isRequired,
+  idade: React.PropTypes.number
+}
+```
+
+Fazendo dessa forma todos os dados passados  para o componente 'MostrarDados' via props serão validados e uma mensagem de erro é mostrada caso as regras estabelecidas não sejam cumpridas.

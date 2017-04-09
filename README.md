@@ -38,10 +38,17 @@ gitbook serve
 
 ### Gerando o livro (build) para produção
 
-Basta rodar o comando:
+Basta rodar os comandos:
 
 ```shell
+gitbook install
 gitbook build
+git checkout gh-pages
+rm -rf chapter\ gitbook\ index.html search_index.json
+mv -v _book/* .
+git add --all
+git commit -m "Update book"
+git push origin gh-pages
 ```
 
 ### Outras maneiras de contribuir com esse projeto

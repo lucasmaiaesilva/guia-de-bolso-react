@@ -335,3 +335,7 @@ class App extends Component {
 ```
 
 Como dito quando alterado o estado, o componente automaticamente irá **re-renderizar**, ou seja, será renderizado novamente, aplicando as mudanças necessárias requeridas pelo método `setState`.
+
+## Fluxo de Dados unidirecional
+
+O React sempre renderiza informação vinda de pai pra filho no formato de `props`, porém no componente pai onde se é requerido um certo dinamismo na aplicação, esses dados muito provavelmente em formato de `states`. 

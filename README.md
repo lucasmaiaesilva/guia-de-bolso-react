@@ -2,7 +2,7 @@
 
 Um prático sobre a biblioteca React.
 
-Leia através [desse link](lucasmaiaesilva.github.io/guia-de-bolso-react).
+Leia através [desse link](http://lucasmaiaesilva.github.io/guia-de-bolso-react).
 
 ## Contribuições
 

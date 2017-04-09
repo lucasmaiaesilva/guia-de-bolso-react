@@ -8,6 +8,14 @@ Leia através [desse link](lucasmaiaesilva.github.io/guia-de-bolso-react).
 
 Para contribuir basta ter o Nodejs e o GitBook instalados em seu SO e sair escrevendo!
 
+### Sumário
+
+- [Instalando o GitBook](#instalando-o-gitbook)
+- [Adicionando um novo capítulo](#adicionando-um-novo-capítulo)
+- [Subindo o servidor local](#subindo-o-servidor-local)
+- [Gerando o livro (build) para produção](#gerando-o-livro-build-para-produção)
+- [Outras maneiras de contribuir com esse projeto](#outras-maneiras-de-contribuir-com-esse-projeto)
+
 ### Instalando o GitBook
 
 Execute o comando:

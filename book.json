@@ -1,0 +1,14 @@
+{
+    "structure": {
+        "readme": "intro.md"
+    },
+    "title" : "React: O guia de bolso",
+    "description": "Informações úteis e práticas sobre a biblioteca React",
+    "language": "pt",
+    "plugins": ["disqus"],
+    "pluginsConfig": {
+      "disqus": {
+        "shortName": ""
+       }
+    }
+}

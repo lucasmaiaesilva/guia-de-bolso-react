@@ -141,4 +141,28 @@ MostrarDados.propTypes = {
 }
 ```
 
-Fazendo dessa forma todos os dados passados  para o componente 'MostrarDados' via props serão validados e uma mensagem de erro é mostrada caso as regras estabelecidas não sejam cumpridas.
+Usando a propriedade `isRequired` ao final da configuração do Proptype, o componente entende que aquela propriedade é **obrigatória**, ou seja, se ela não for passada ao componente, o mesmo não irá se renderizar e vai mostrar uma mensagem de erro.
+
+Vejamos alguns tipos de `propTypes` mais utilizados.
+
+```js
+MeuComponente.propTypes = {
+  optionalArray: React.PropTypes.array,
+  optionalBool: React.PropTypes.bool,
+  optionalFunc: React.PropTypes.func,
+  optionalNumber: React.PropTypes.number,
+  optionalObject: React.PropTypes.object,
+  optionalString: React.PropTypes.string,
+
+  // Um elemento react
+  optionalElement: React.PropTypes.element,
+
+  // Declarando um objeto e setando tipos de proptypes
+  // dentro do próprio objeto
+  optionalObjectWithShape: React.PropTypes.shape({
+    color: React.PropTypes.string,
+    fontSize: React.PropTypes.number
+  })
+}
+```
+Fazendo dessa forma todos os dados passados  para o componente via props serão validados e uma mensagem de erro é mostrada caso as regras estabelecidas não sejam cumpridas. Essa é a função do `propTypes`.

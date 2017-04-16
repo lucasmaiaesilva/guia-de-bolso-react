@@ -8,7 +8,22 @@ Basicamente existem 3 formas de se renderizar os Componentes React são elas:
 
 ### React.createClass()
 
-Usada nos exemplos anteriores, uma maneira de se criar componentes usando ES5.
+A função `createClass` aceita um objeto por parâmetro e as `features` do React são escritas como **propriedades** desse objeto. Vejamos um exemplo:
+
+```js
+var Title = React.createClass({
+  defaultProps: {
+    valorInicial: ''
+  },
+  render: function () {
+    return (
+      <h1>Olá mundo</h1>
+    )
+  }
+})
+```
+
+No momento de escrita desse guia, essa maneira de se escrever React não é a mais recomendada, uma vez que com o surgimento do ES6 vieram novas formas menos *verbosas* de se escrever componentes.
 
 ### Funções puras
 

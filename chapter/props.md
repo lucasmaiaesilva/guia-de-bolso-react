@@ -127,7 +127,9 @@ Dentro da classe App, podemos ver 2 chamadas do Component 'Mensagem', a primeira
 Existe uma feature do React que nos permite de certo modo 'mascarar' os dados nele contidos a fim de dar uma maior segurança as propriedades passadas entre os Componentes.
 
 ```js
-const React from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+// é necessária a instalação da lib prop-types
 
 const MostrarDados = ({ nome, idade }) => (
   <div className='dados'>
@@ -136,8 +138,8 @@ const MostrarDados = ({ nome, idade }) => (
 )
 
 MostrarDados.propTypes = {
-  nome: React.PropTypes.string.isRequired,
-  idade: React.PropTypes.number
+  nome: PropTypes.string.isRequired,
+  idade: PropTypes.number
 }
 ```
 
@@ -147,21 +149,21 @@ Vejamos alguns tipos de `propTypes` mais utilizados.
 
 ```js
 MeuComponente.propTypes = {
-  optionalArray: React.PropTypes.array,
-  optionalBool: React.PropTypes.bool,
-  optionalFunc: React.PropTypes.func,
-  optionalNumber: React.PropTypes.number,
-  optionalObject: React.PropTypes.object,
-  optionalString: React.PropTypes.string,
+  optionalArray: PropTypes.array,
+  optionalBool: PropTypes.bool,
+  optionalFunc: PropTypes.func,
+  optionalNumber: PropTypes.number,
+  optionalObject: PropTypes.object,
+  optionalString: PropTypes.string,
 
   // Um elemento react
-  optionalElement: React.PropTypes.element,
+  optionalElement: PropTypes.element,
 
   // Declarando um objeto e setando tipos de proptypes
   // dentro do próprio objeto
-  optionalObjectWithShape: React.PropTypes.shape({
-    color: React.PropTypes.string,
-    fontSize: React.PropTypes.number
+  optionalObjectWithShape: PropTypes.shape({
+    color: PropTypes.string,
+    fontSize: PropTypes.number
   })
 }
 ```

@@ -31,4 +31,4 @@ Como dito quando alterado o estado, o componente automaticamente irá **re-rende
 
 ### Fluxo de Dados unidirecional
 
-O React sempre renderiza informação vinda de pai pra filho no formato de `props`, porém no componente pai onde se é requerido um certo dinamismo na aplicação, esses dados muito provavelmente em formato de `states`. 
+O React sempre renderiza informação vinda de pai pra filho no formato de `props`, porém no componente pai onde se é requerido um certo dinamismo na aplicação, esses dados muito provavelmente são usados em formato de `states`. 

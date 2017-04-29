@@ -8,7 +8,7 @@ No React, toda vez que um estado é alterado o componente é renderizado novamen
 class App extends Component {
   constructor () {
 
-    // função que puxa as configurações da classe Component
+    // função que `puxa` as configurações da classe Component
     super()
 
     // setando um estado inicial para as propriedades
@@ -31,4 +31,4 @@ Como dito quando alterado o estado, o componente automaticamente irá **re-rende
 
 ### Fluxo de Dados unidirecional
 
-O React sempre renderiza informação vinda de pai pra filho no formato de `props`, porém no componente pai onde se é requerido um certo dinamismo na aplicação, esses dados muito provavelmente são usados em formato de `states`. 
+O React sempre renderiza informação vinda de pai pra filho no formato de `props`, porém no componente pai onde se é requerido um certo dinamismo na aplicação, esses dados muito provavelmente são usados em formato de `states`.

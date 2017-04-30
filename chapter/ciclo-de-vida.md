@@ -4,7 +4,7 @@
 
 #### componentWillMount
 
-// render
+// component rendering
 
 #### componentDidMount
 
@@ -16,7 +16,7 @@
 
 #### componentWillUpdate
 
-// render
+// component rendering
 
 #### componentDidUpdate
 

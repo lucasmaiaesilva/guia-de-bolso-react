@@ -6,7 +6,7 @@ Leia através [desse link](http://lucasmaiaesilva.github.io/guia-de-bolso-react)
 
 ## Contribuições
 
-Para contribuir basta ter o Nodejs e o GitBook instalados em seu SO e sair escrevendo!
+Para contribuir basta ter o Nodejs e o GitBook instalados em seu sistema operacional e sair escrevendo!
 
 ### Sumário
 
